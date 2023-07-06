@@ -1,3 +1,15 @@
+# Wav2Lip for Apple Silicon Macs
+This fork of Wav2Lip uses torch and torchvision with MPS support, which allow hardware-acellerated inference on M1/M2 macs. Inference works using the  [pre-trained model](https://iiitaphyd-my.sharepoint.com/:u:/g/personal/radrabha_m_research_iiit_ac_in/Eb3LEzbfuKlJiR600lQWRxgBIY27JZg80f7V9jtMfbNDaQ?e=TBFBVW), training has not been tested and probably won't work...
+
+Tested on an M1 Pro machine running python 3.11.1. 
+
+```
+pyenv install 3.11.1
+pyenv local 3.11.1
+pip install -r requirements.txt
+python inference.py --checkpoint_path '/Users/julius/Downloads/wav2lip.pth' --face face.mp4 --audio audio.wav --outfile output.mp4
+```
+
 # **Wav2Lip**: *Accurately Lip-syncing Videos In The Wild*
 
 For commercial requests, please contact us at radrabha.m@research.iiit.ac.in or prajwal.k@research.iiit.ac.in. We have an HD model ready that can be used commercially.
