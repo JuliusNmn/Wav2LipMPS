@@ -6,6 +6,8 @@ Tested on an M1 Pro machine running python 3.11.1.
 ```
 pyenv install 3.11.1
 pyenv local 3.11.1
+python -m venv venv311
+source venv311/bin/activate
 pip install -r requirements.txt
 python inference.py --checkpoint_path '/Users/julius/Downloads/wav2lip.pth' --face face.mp4 --audio audio.wav --outfile output.mp4
 ```
